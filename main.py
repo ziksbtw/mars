@@ -4,10 +4,10 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 
 
-@app.route('/Заготовка')
+@app.route('/<title>')
 
-@app.route('/index/Заготовка')
-def mars():
+@app.route('/index/<title>')
+def mars(title):
     return render_template('base.html')
 
 
