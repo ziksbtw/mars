@@ -1,10 +1,10 @@
 from flask import Flask, render_template, redirect, request, make_response, session, abort
 from data import db_session
-from data.users import User
-from data.news import News
-from forms.news import NewsForm
-from forms.user import RegisterForm
-from forms.user import LoginForm
+from data.Mars_One import User
+from data.jobs import News
+from forms.jobs import NewsForm
+from forms.Mars_One import RegisterForm
+from forms.Mars_One import LoginForm
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 
 app = Flask(__name__)
@@ -78,7 +78,7 @@ def edit_news(id):
             return redirect('/')
         else:
             abort(404)
-    return render_template('news.html',
+    return render_template('jobs.html',
                            title='Редактирование новости',
                            form=form
                            )

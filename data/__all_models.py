@@ -1,3 +1,3 @@
-from . import users
-from . import news
+from . import Mars_One
+from . import jobs
 from . import category
